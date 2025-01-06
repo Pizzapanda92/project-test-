@@ -1,0 +1,159 @@
+/* Importation des polices */
+@font-face {
+    font-family: 'UberMove';
+    src: url('../font/UberMoveBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UberMoveMedium';
+    src: url('../font/UberMoveMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'UberMoveMedium', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    background: url("../image/0000-0250-ezgif.com-video-to-gif-converter.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Section principale */
+section.top-page {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header */
+header.header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond transparent */
+}
+
+header.header img {
+    width: 150px;
+}
+
+/* Menu */
+nav.nav_header ul {
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Espace entre les éléments du menu */
+
+}
+
+nav.nav_header ul li {
+    position: relative;
+}
+
+nav.nav_header ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav.nav_header ul li a:hover {
+    color: #020202; /* Couleur lors du survol */
+}
+
+/* Sous-menus */
+nav.nav_header ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -5px;
+    transform: translateX(12%);
+    background-color: rgb(33, 152, 208);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+nav.nav_header ul li .dropdown li {
+    padding: 0;
+}
+
+nav.nav_header ul li .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: rgb(88, 6, 240);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav.nav_header ul li .dropdown li a:hover {
+    background-color: #b20bcb; /* Couleur lors du survol */
+}
+
+nav.nav_header ul li:hover .dropdown {
+    display: block;
+}
+
+/* Titre principal */
+.big-title {
+    color: black;
+    font-size: 80px;
+    text-align: center;
+    margin: 0;
+    padding-top: 40px;
+}
+
+/* Flèche animée */
+.arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px; /* Ajustez selon l'espacement souhaité */
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid black;
+    margin: 10px auto;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Texte sous la flèche */
+.arrow-container p {
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+}
